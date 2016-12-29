@@ -71,6 +71,9 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('select').select2();
+        $('#search select').change(function () {
+            $('#search').submit();
+        })
     });
 </script>
 </body>
