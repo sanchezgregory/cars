@@ -3,8 +3,13 @@
 @section('content')
 
     <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+
+        <h1>Proyecto para:</h1>
+        <hr>
+            <h3> ver selects dependientes</h3>
+            <h3> Agregar etiquetas </h3>
+            <h3> Autompletado de usuarios desde la base de datos (Json)</h3>
+
     </div>
 
 @endsection

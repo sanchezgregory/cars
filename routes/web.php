@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web routes
 |--------------------------------------------------------------------------
 |
 | This file is where you may define all of the routes that are handled
@@ -11,14 +11,20 @@
 |
 */
 
+use Cars\Models\User;
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('bootstrap');
 });
 
-Route::get('bootstrap', function() {
-   return view('bootstrap');
+Route::get('users/{id}', function ($id) {
+    return User::findOrFail($id);
 });
 
-Route::get('dropdowns', function (){
-   return view('components.dropdowns');
+Route::get('bootstrap', function () {
+    return view('bootstrap');
 });
+
+include __DIR__.'/dropdowns.php';
+include __DIR__.'/features.php';
+include __DIR__.'/autocomplete.php';

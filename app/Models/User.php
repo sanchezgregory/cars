@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public static function findByNameOrEmail($term)
+    {
+        return static::select('id', 'name', 'email')
+            ->where('name', 'LIKE', "%$term%")
+            ->orWhere('email', 'LIKE', "%$term%")
+            ->get();
+    }
 }
